@@ -1,0 +1,29 @@
+#include "CExponentialFilter.h"
+
+/*
+ * CExponentialFilter.cpp
+ *
+ *  Created on: May 29, 2024
+ *      Author: Steven Atmodjo
+ */
+CExponentialFilter::CExponentialFilter(float factor) {
+    // Das Faktor wird mit Eingabe zugewiesen.
+    m_factor = factor;
+
+    // Der letzte Wert wird mit 0 initialisiert.
+    m_last = 0;
+}
+
+CExponentialFilter& CExponentialFilter::operator<<(float value) {
+    // Der letzte Wert wird berechnet.
+    m_last = m_last+(value - m_last)*m_factor;
+
+    // Ein Referenz auf das aktualisierte Objekt wird zurueckgegeben.
+    return *this;
+}
+
+CExponentialFilter::operator float() const {
+    // Den aktuellen gefilterten Wert wird zurueckgegeben.
+    return m_last;
+}
+

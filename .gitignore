@@ -1,0 +1,25 @@
+# Build artifacts
+BUILD/
+.build/
+*.o
+*.a
+*.elf
+*.bin
+*.hex
+*.map
+
+# mbed specific
+.mbed
+mbed_settings.json
+mbed-os/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Dependencies
+*.d

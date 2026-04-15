@@ -120,7 +120,7 @@ mbed compile --target <target> --toolchain GCC_ARM
 
 ## Author
 
-Steven Atmodjo (Mat. Nr. 772550)
+Steven Atmodjo 
 
 ## License
 
